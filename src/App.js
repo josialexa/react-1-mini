@@ -1,9 +1,9 @@
 import React from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
-import { tsConstructorType } from '@babel/types';
+// import { tsConstructorType } from '@babel/types';
 
-class App extends React.component {
+class App extends React.Component {
   constructor() {
     super()
     this.state = {
