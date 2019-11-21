@@ -25,6 +25,19 @@ class App extends React.Component {
     })
   }
 
+  addFriend() {
+    const {friends, picture, name} = this.state;
+
+    let newFriends = friends.slice();
+    newFriends.push({picture, name});
+
+    this.setState({
+      friends: newFriends,
+      picture: '',
+      name: ''
+    })
+  }
+
   render() {
 
     return (
@@ -44,7 +57,9 @@ class App extends React.Component {
           />
         </label>
 
-        <button>Add Friend</button>
+        <button
+          onClick={() => this.addFriend()}
+        >Add Friend</button>
       </div>
     )
   }
