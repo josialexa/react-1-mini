@@ -40,6 +40,12 @@ class App extends React.Component {
 
   render() {
 
+  const friends = this.state.friends.map((v, i) => (
+    <div key={`friend-${i}-${v.name}`}>
+      <img width="100px" src={v.picture} />
+      <span>{v.name}</span>
+    </div>)
+  )
     return (
 
       <div>
@@ -60,6 +66,7 @@ class App extends React.Component {
         <button
           onClick={() => this.addFriend()}
         >Add Friend</button>
+        {friends}
       </div>
     )
   }
