@@ -13,6 +13,18 @@ class App extends React.Component {
     }
   }
 
+  updatePicture(value) {
+    this.setState({
+      picture: value
+    })
+  }
+
+  updateName(value) {
+    this.setState({
+      name: value
+    })
+  }
+
   render() {
 
     return (
@@ -20,13 +32,15 @@ class App extends React.Component {
       <div>
         <label>Picture:
           <input
-
+            onChange={e => this.updatePicture(e.target.value)}
+            value={this.state.picture}
           />
         </label>
 
         <label>Name:
           <input
-
+            onChange={e => this.updateName(e.target.value)}
+            value={this.state.name}
           />
         </label>
 
