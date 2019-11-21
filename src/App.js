@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import { tsConstructorType } from '@babel/types';
 
-function App() {
+class App extends React.component {
   constructor() {
     super()
     this.state = {
@@ -13,23 +13,27 @@ function App() {
     }
   }
 
-  return (
-    <div>
-      <label>Picture:
-        <input
+  render() {
 
-        />
-      </label>
+    return (
 
-      <label>Name:
-        <input
+      <div>
+        <label>Picture:
+          <input
 
-        />
-      </label>
+          />
+        </label>
 
-      <button>Add Friend</button>
-    </div>
-  );
+        <label>Name:
+          <input
+
+          />
+        </label>
+
+        <button>Add Friend</button>
+      </div>
+    )
+  }
 }
 
 export default App;
